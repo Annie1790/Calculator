@@ -1,0 +1,94 @@
+@font-face {
+    font-family: digital;
+    src: url(./media/DS-DIGI.TTF);
+
+}
+
+body {
+    background-image: url(./media/andrew-ridley-jR4Zf-riEjI-unsplash.jpg);
+    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+}
+
+main {
+    grid-column: 2;
+}
+
+.calculator-display {
+    width: 300px;
+    height: 100px;
+    background-color: blanchedalmond;
+    margin: auto;
+    text-align: end;
+}
+
+
+.calculator-box {
+    background-color: cornflowerblue;
+    width: 350px;
+    height: 400px;
+}
+
+.number-operator-buttons {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    justify-content: center;
+    width: 350px;
+    height: 275px;
+    gap: 10px;
+}
+
+#AC-button {
+    grid-area: 1 / 1;
+}
+
+#C-button {
+    grid-area: 1 / 2;
+}
+
+#remainder-button {
+    grid-area: 1 / 3;
+}
+
+#divide-button {
+    grid-area: 1 / 4;
+}
+
+#equal-button {
+    grid-area: 5 / 3 / 5 / 5;
+    width: 95px;
+    border-radius: 2em;
+}
+
+
+button {
+    font-family: digital;
+    height: 45px;
+    width: 45px;
+    margin: auto;
+    border-radius: 100%;
+    font-size: 30px;
+}
+
+footer {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: auto;
+}
