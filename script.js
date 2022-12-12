@@ -7,7 +7,7 @@ const divideButton = document.querySelector("#divide-button");
 const multiplyButton = document.querySelector("#multiply-button");
 const addButton = document.querySelector("#add-button");
 const subtractButton = document.querySelector("#subtract-button");
-const equalButton = document.querySelector("#equal-button")
+const equalButton = document.querySelector("#equal-button");
 
 const num9 = document.querySelector("#number-9");
 const num8 = document.querySelector("#number-8");
@@ -21,26 +21,45 @@ const num1 = document.querySelector("#number-1");
 const num0 = document.querySelector("#number-0");
 const dot = document.querySelector("#dot-button");
 
-num9.addEventListener("click", function() {
-    inputField.innerHTML="";
+let displayValue = [];
+inputField.textContent = [];
+
+num9.addEventListener("click", function () {
+    inputField.textContent = displayValue.push(num9);
+    console.log(inputField)
 })
 
-function add() {
 
+function add(firstNum, secondNum) {
+    return firstNum + secondNum;
 };
 
-function subtract() {
-
+function subtract(firstNum, secondNum) {
+    return firstNum - secondNum;
 };
 
-function multiply() {
-
+function multiply(firstNum, secondNum) {
+    return firstNum * secondNum;
 };
 
-function divide() {
-
+function divide(firstNum, secondNum) {
+    return firstNum / secondNum;
 };
 
 function operate(operator, number1, number2) {
+    if (operator == "+") {
+        add(number1,number2)
+    }
+    if (operator == "-") {
+        subtract(number1,number2)
+    }
 
+    if (operator == "*") {
+        multiply(number1,number2)
+    }
+
+    if (operator == "/") {
+        divide(number1,number2)
+    }
 }
+
