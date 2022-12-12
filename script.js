@@ -21,14 +21,55 @@ const num1 = document.querySelector("#number-1");
 const num0 = document.querySelector("#number-0");
 const dot = document.querySelector("#dot-button");
 
-let displayValue = [];
-inputField.textContent = [];
+let displayValue = 0;
 
 num9.addEventListener("click", function () {
-    inputField.textContent = displayValue.push(num9);
-    console.log(inputField)
+    inputField.innerText += 9;
 })
 
+num8.addEventListener("click", function () {
+    inputField.innerText += 8;
+})
+
+num7.addEventListener("click", function () {
+    inputField.innerText += 7;
+})
+
+num6.addEventListener("click", function () {
+    inputField.innerText += 6;
+})
+
+num5.addEventListener("click", function () {
+    inputField.innerText += 5;
+})
+
+num4.addEventListener("click", function () {
+    inputField.innerText += 4;
+})
+
+num3.addEventListener("click", function () {
+    inputField.innerText += 3;
+})
+
+num2.addEventListener("click", function () {
+    inputField.innerText += 2;
+})
+
+num1.addEventListener("click", function () {
+    inputField.innerText += 1;
+})
+
+num0.addEventListener("click", function () {
+    inputField.innerText += 0   ;
+})
+
+cButton.addEventListener("click", function() {
+    inputField.innerText = "";
+})
+
+acButton.addEventListener("click", function() {
+    inputField.innerText = inputField.innerText.slice(0,-1);
+})
 
 function add(firstNum, secondNum) {
     return firstNum + secondNum;
