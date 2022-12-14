@@ -27,68 +27,66 @@ header {
 
 main {
     grid-column: 2;
+    grid-row: 2;
 }
 
-.calculator-display {
-    width: 300px;
-    height: 100px;
-    background-color: blanchedalmond;
-    margin: auto;
-    text-align: end;
+ul {
+    list-style: none;
+    text-align: center;
+    font-size: 3em;
 }
 
 
 .calculator-box {
-    background-color: cornflowerblue;
-    width: 350px;
-    height: 400px;
-}
-
-.number-operator-buttons {
+    background-image: linear-gradient(black, grey);
+    border-radius: 1em;
+    border: 2px solid black;
+    width: 400px;
+    height: 600px;
     display: grid;
     grid-template-rows: auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto ;
     justify-content: center;
+    align-items: center;
+}
+
+.calculator-display {
+    border-radius: 1em;
+    border: 1px solid white;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(81, 112, 85);
+    padding: 0 1em 0 1em;
+    text-align: end;
+    font-family: digital;
+    font-size: 1.5em;;
+}
+
+
+.number-operator-buttons {
     width: 350px;
     height: 275px;
     gap: 10px;
 }
 
-#AC-button {
-    grid-area: 1 / 1;
-}
 
-#C-button {
-    grid-area: 1 / 2;
-}
-
-#remainder-button {
-    grid-area: 1 / 3;
-}
-
-#divide-button {
-    grid-area: 1 / 4;
-}
-
-#equal-button {
-    grid-area: 5 / 3 / 5 / 5;
-    width: 95px;
-    border-radius: 2em;
-}
 
 
 button {
     font-family: digital;
-    height: 45px;
-    width: 45px;
+    height: 2.5em;
+    width: 2.5em;
     margin: auto;
     border-radius: 100%;
-    font-size: 30px;
+    font-size: 2em;
+}
+
+#equal-button {
+    width: 5em;
+    border-radius: 2em;
 }
 
 footer {
     grid-row: 3;
-    grid-column-start: 1;
-    grid-column-end: 3;
     margin-top: auto;
 }
